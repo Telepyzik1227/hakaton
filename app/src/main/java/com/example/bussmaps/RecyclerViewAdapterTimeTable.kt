@@ -4,7 +4,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.example.bussmaps.MapsActivity
+import com.example.bussmaps.R
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class RecyclerViewAdapterTimeTable :
@@ -24,6 +28,10 @@ class RecyclerViewAdapterTimeTable :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView =
             LayoutInflater.from(parent.context).inflate(R.layout.route_item, parent, false)
+        itemView.findViewById<FloatingActionButton>(R.id.fabMap).setOnClickListener {
+            itemView.findNavController().navigate(R.id.action_timeTableFragment_to_polyActivity)
+//            (TimeTableFragment().activity as MapsActivity?)?.moveToMap()
+        }
         return MyViewHolder(itemView)
     }
 

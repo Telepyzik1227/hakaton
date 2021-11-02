@@ -13,10 +13,11 @@ class PolyActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnPolyli
     GoogleMap.OnPolygonClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_maps)
+        setContentView(R.layout.activity_poly)
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment?
         mapFragment?.getMapAsync(this)
+
     }
 
     private val COLOR_BLACK_ARGB = -0xa80e9

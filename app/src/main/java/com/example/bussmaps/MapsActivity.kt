@@ -1,5 +1,6 @@
 package com.example.bussmaps
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -10,14 +11,13 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.example.myapplication.databinding.ActivityMapsBinding
 import com.example.bussmaps.databinding.ActivityMapsBinding
 import com.google.android.gms.maps.model.*
 
-class MapsActivity : AppCompatActivity()/*, OnMapReadyCallback*/ {
+class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
-//    private lateinit var mMap: GoogleMap
-//    private lateinit var binding: ActivityMapsBinding
+    private lateinit var mMap: GoogleMap
+    private lateinit var binding: ActivityMapsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +46,10 @@ class MapsActivity : AppCompatActivity()/*, OnMapReadyCallback*/ {
         val sydney = LatLng(-34.0, 151.0)
         mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+    }
+    fun moveToMap(){
+        val intent = Intent(this, PolyActivity::class.java)
+        startActivity(intent)
     }
 }
 

@@ -36,6 +36,7 @@
             android:layout_marginTop="70dp"
             android:layout_height="match_parent"/>
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabMap"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:borderWidth="0dp"

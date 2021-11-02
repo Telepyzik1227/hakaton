@@ -5,5 +5,90 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PolyActivity">
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/matCard"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardCornerRadius="15dp"
+        app:strokeWidth="3dp"
+        app:strokeColor="@color/white"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/black">
+        <TextView
+            android:text="Маршрут 1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:textSize="17dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:text="1. Остановка 1"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:layout_marginStart="7.5dp"/>
+        <TextView
+            android:text="2. Остановка 2"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:layout_marginStart="7.5dp"/>
+        <TextView
+            android:text="3. Остановка 3"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="85dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:layout_marginStart="7.5dp"/>
+        <TextView
+            android:text="4. Остановка 4"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="110dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:layout_marginStart="7.5dp"/>
+        <TextView
+            android:text="5. Остановка 5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="135dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="17dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginStart="7.5dp"/>
+    </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
