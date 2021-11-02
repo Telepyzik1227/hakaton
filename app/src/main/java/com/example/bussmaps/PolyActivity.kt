@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.bussmaps
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -166,10 +166,20 @@ class PolyActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnPolyli
             PolygonOptions()
                 .clickable(true)
                 .add(
-                    LatLng(-27.457, 153.040),
-                    LatLng(-33.852, 151.211),
-                    LatLng(-37.813, 144.962),
-                    LatLng(-34.928, 138.599)
+                    LatLng(53.33815389590934, 83.77469414253068),
+                    LatLng(53.342736564102, 83.76908890051887),
+                    LatLng(53.34777270096085, 83.7634810309036),
+                    LatLng(53.350401077285724, 83.76274382680981),
+                    LatLng(53.354456568456875, 83.76890323434378),
+                    LatLng(53.351428410179736, 83.7729372718316),
+                    LatLng(53.34307997814641, 83.78186785099385),
+                    LatLng(53.33248619089282, 83.7882962541985),
+                    LatLng(53.3237970392562, 83.79535792325308),
+                    LatLng(53.31315236824314, 83.78073043001066),
+                    LatLng(53.30825573406941, 83.77398707846207),
+                    LatLng(53.29138198449919, 83.7586051010744),
+                    LatLng(53.28570365063831, 83.75319049329742),
+                    LatLng(53.28231018114933, 83.67123238454016)
                 )
         )
         polygon1.tag = "alpha"
@@ -179,18 +189,23 @@ class PolyActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnPolyli
             PolygonOptions()
                 .clickable(true)
                 .add(
-                    LatLng(-31.673, 128.892),
-                    LatLng(-31.952, 115.857),
-                    LatLng(-17.785, 122.258),
-                    LatLng(-12.4258, 130.7932)
+                    LatLng(53.30631092891604, 83.55628527874524),
+                    LatLng(53.307591952568245, 83.62088760461215),
+                    LatLng(53.28785179264473, 83.64277871587521),
+                    LatLng(53.28950194880267, 83.6475506372007),
+                    LatLng(53.289468825265246, 83.64754691764256),
+                    LatLng(53.28788240803803, 83.65638877113003),
+                    LatLng(53.289233890851605, 83.66180870262205),
+                    LatLng(53.28955421970917, 83.67363611675667),
+                    LatLng(53.28239423191965, 83.67131561433406)
                 )
         )
         polygon2.tag = "beta"
         stylePolygon(polygon2)
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(LatLng(-23.684, 133.903), 4f))
 
-        googleMap.setOnPolylineClickListener(this)
-        googleMap.setOnPolygonClickListener(this)
+//        googleMap.setOnPolylineClickListener(this)
+//        googleMap.setOnPolygonClickListener(this)
     }
 
 }

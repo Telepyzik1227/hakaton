@@ -1,14 +1,13 @@
-package com.example.myapplication
+package com.example.bussmaps
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.example.myapplication.databinding.ActivityMapsBinding
+import com.example.bussmaps.databinding.ActivityMapsBinding
 import com.google.android.gms.maps.model.*
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
