@@ -5,6 +5,12 @@
       <map>
         <entry key="..\:/KvTech/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3212962962962963" />
         <entry key="..\:/KvTech/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3212962962962963" />
+        <entry key="..\:/Users/2007e/AndroidStudioProjects/hakaton/app/src/main/res/layout/activity_maps.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/2007e/AndroidStudioProjects/hakaton/app/src/main/res/layout/fragment_time_table.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/2007e/AndroidStudioProjects/hakaton/app/src/main/res/layout/mylist_item.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/2007e/AndroidStudioProjects/hakaton/app/src/main/res/layout/route_item.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/2007e/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_list_item_1.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/2007e/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_list_item_2.xml" value="0.27447916666666666" />
       </map>
     </option>
   </component>

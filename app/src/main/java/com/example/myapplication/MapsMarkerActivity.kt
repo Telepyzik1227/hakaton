@@ -10,7 +10,10 @@ abstract class MapsMarkerActivity:AppCompatActivity(), OnMapReadyCallback {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_maps)
         if(getString(R.string.maps_api_key).isEmpty()){
-//Toast.makeText(this, "")
+            Toast.makeText(this, "error", Toast.LENGTH_SHORT).show()
+        }
+        else{
+
         }
     }
 }
