@@ -19,7 +19,13 @@
         android:theme="@style/Theme.MyApplication">
         <activity
             android:name="com.example.bussmaps.PolyActivity"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -34,13 +40,9 @@
 
         <activity
             android:name="com.example.bussmaps.MapsActivity"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/title_activity_maps">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

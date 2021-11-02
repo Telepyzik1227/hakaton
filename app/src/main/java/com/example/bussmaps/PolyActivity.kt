@@ -19,7 +19,7 @@ class PolyActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnPolyli
         mapFragment?.getMapAsync(this)
     }
 
-    private val COLOR_BLACK_ARGB = -0x1000000
+    private val COLOR_BLACK_ARGB = -0xa80e9
     private val POLYLINE_STROKE_WIDTH_PX = 12
 
     /**
@@ -42,6 +42,25 @@ class PolyActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnPolyli
         polyline.endCap = RoundCap()
         polyline.width = POLYLINE_STROKE_WIDTH_PX.toFloat()
         polyline.color = COLOR_BLACK_ARGB
+        polyline.jointType = JointType.ROUND
+    }
+
+    private fun secondStylePolyline(polyline: Polyline) {
+        val type = polyline.tag?.toString() ?: ""
+        when (type) {
+            "A" -> {
+                polyline.startCap = CustomCap(
+                    BitmapDescriptorFactory.fromResource(R.drawable.ic_mtrl_chip_checked_circle),
+                    10f
+                )
+            }
+            "B" -> {
+                polyline.startCap = RoundCap()
+            }
+        }
+        polyline.endCap = RoundCap()
+        polyline.width = POLYLINE_STROKE_WIDTH_PX.toFloat()
+        polyline.color = -0x7e387c
         polyline.jointType = JointType.ROUND
     }
 
@@ -79,10 +98,10 @@ class PolyActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnPolyli
     }
 
     private val COLOR_WHITE_ARGB = -0x1
-    private val COLOR_GREEN_ARGB = -0xc771c4
+    private val COLOR_GREEN_ARGB = -0x00000000
     private val COLOR_PURPLE_ARGB = -0x7e387c
-    private val COLOR_ORANGE_ARGB = -0xa80e9
-    private val COLOR_BLUE_ARGB = -0x657db
+    private val COLOR_ORANGE_ARGB = -0x00000000
+    private val COLOR_BLUE_ARGB = -0x00000000
     private val POLYGON_STROKE_WIDTH_PX = 8
     private val PATTERN_DASH_LENGTH_PX = 20
 
@@ -106,7 +125,32 @@ class PolyActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnPolyli
             "alpha" -> {
                 pattern = PATTERN_POLYGON_ALPHA
                 strokeColor = COLOR_GREEN_ARGB
-                fillColor = COLOR_PURPLE_ARGB
+                fillColor = COLOR_BLUE_ARGB
+
+            }
+            "beta" -> {
+                pattern = PATTERN_POLYGON_BETA
+                strokeColor = COLOR_ORANGE_ARGB
+                fillColor = COLOR_BLUE_ARGB
+            }
+        }
+        polygon.strokePattern = pattern
+        polygon.strokeWidth = POLYGON_STROKE_WIDTH_PX.toFloat()
+        polygon.strokeColor = strokeColor
+        polygon.fillColor = fillColor
+    }
+
+    private fun tylePolygon(polygon: Polygon) {
+        val type = polygon.tag?.toString() ?: ""
+        var pattern: List<PatternItem>? = null
+        var strokeColor = COLOR_BLACK_ARGB
+        var fillColor = COLOR_WHITE_ARGB
+        when (type) {
+            "alpha" -> {
+                pattern = PATTERN_POLYGON_ALPHA
+                strokeColor = COLOR_GREEN_ARGB
+                fillColor = COLOR_BLUE_ARGB
+
             }
             "beta" -> {
                 pattern = PATTERN_POLYGON_BETA
@@ -160,7 +204,7 @@ class PolyActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnPolyli
                 )
         )
         polyline2.tag = "пос.Октябрьский - Завод:автобус ПАЗ33205(Е 268 УС 22)"
-        stylePolyline(polyline2)
+        secondStylePolyline(polyline2)
 
         val polygon1 = googleMap.addPolygon(
             PolygonOptions()
@@ -202,7 +246,7 @@ class PolyActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnPolyli
         )
         polygon2.tag = "beta"
         stylePolygon(polygon2)
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(LatLng(-23.684, 133.903), 4f))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(LatLng(53.30631092891604, 83.55628527874524), 4f))
 
 //        googleMap.setOnPolylineClickListener(this)
 //        googleMap.setOnPolygonClickListener(this)
