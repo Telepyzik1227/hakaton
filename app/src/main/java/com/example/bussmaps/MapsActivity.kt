@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.bussmaps
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,6 +11,7 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.example.myapplication.databinding.ActivityMapsBinding
+import com.example.bussmaps.databinding.ActivityMapsBinding
 import com.google.android.gms.maps.model.*
 
 class MapsActivity : AppCompatActivity()/*, OnMapReadyCallback*/ {
@@ -48,3 +49,6 @@ class MapsActivity : AppCompatActivity()/*, OnMapReadyCallback*/ {
 //        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
 //    }
 }
+
+
+

@@ -14,6 +14,8 @@ abstract class MapsMarkerActivity:AppCompatActivity(), OnMapReadyCallback {
         }
         else{
 
+        if(getString(R.string.MAPS_API_KEY).isEmpty()){
+//Toast.makeText(this, "")
         }
     }
 }

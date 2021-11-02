@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.bussmaps
 
 import org.junit.Test
 
