@@ -12,7 +12,7 @@
         tools:layout="@layout/activity_maps" />
     <fragment
         android:id="@+id/timeTableFragment"
-        android:name="com.example.myapplication.TimeTableFragment"
+        android:name="com.example.bussmaps.TimeTableFragment"
         android:label="fragment_time_table"
         tools:layout="@layout/fragment_time_table" >
         <action
